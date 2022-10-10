@@ -8,95 +8,71 @@ should be carried out numerically. The solution should include a function
 which returns a numbers which is obtained by taking last k digits from a given number
 (e.g. last 3 digits of 123456 forms number 456).
 
-Program created: 05/10/2022
+Program created: 10/10/2022
 ********************************/
 
 #include <iostream>
 
 using namespace std;
-/*
-int dig_ret (int num) { //25
-    int num_pow = num * num; // 625
-    int digit = (num*num)%10; //625%10 = 5
 
-    int full_num = digit;
+int dig_return (int num) { //function that returns n number digits of variable x squared
 
-    while (num_pow > 9) {
-        full_num*=10;
-        full_num+=digit;
-        num_pow/=10;
+    if (num % 10 == 0) { //numbers that divides by 10 with no remainder are outed, they do not meet the criteria
+        return 0;
     }
-    return full_num;
-}*/
-int shuffle (int fir, int sec) {
 
-}
-
-int dig_return (int num) {//25
     int num_copy = num;
     int ten_pow = 0;
-
-    while (num_copy > 0)
+    while (num_copy > 0) //get the number of digits that must be returned
     {
         ten_pow++;
         num_copy /= 10;
     }
 
     int full_num = 0;
-    int fir_dig = 0;
-    int sec_dig = 0;
     int num_in_pow = num * num;
-
-    int temp_var = 0;
-
-    for (int i = 0; i < ten_pow; i++) {
-
-        fir_dig = num_in_pow % 10;
-        if (full_num * 10 > 10) {
-            temp_var = full_num % 10;
-            full_num = ((num_in_pow % 10) * 10) + temp_var;
-
-
+    for (int i = 0; i < ten_pow; i++) { //calculate exact digits that will be returned. Splitting digits numerically using modulo algorithm
+        if (full_num == 0){
+            full_num += num_in_pow % 10;
         } else {
-            full_num += fir_dig;
+            int new_pow = num_in_pow % 10;
+            for (int j = 0; j < i; j++){
+                new_pow *= 10;
+            }
+            full_num = new_pow + full_num;
         }
-        sec_dig = num_in_pow % 10;
         num_in_pow /= 10;
     }
     return full_num;
 }
 
-
 int main () {
     int end_prog;
-    do {
+    do { //code for continuous program iteration by asking user's input at the end of program
 
-
-
-        int x,y;
-        cout<<"Enter first number: ";
-        cin>>x;
-        while (x<1) {
-            cout<<"Enter natural number only: ";
-            cin>>x;
+        int x,y; //declare variables that will be used as user's input to provide numbers range
+        cout << "Enter first number: ";
+        cin >> x;
+        while (x < 1) { //provided check for natural number only for first input
+            cout << "Enter natural number only: ";
+            cin >> x;
         }
 
-        cout<<"Enter second number: ";
-        cin>>y;
-        while (y<1) {
-            cout<<"Enter natural number only: ";
-            cin>>y;
+        cout << "Enter second number: ";
+        cin >> y;
+        while (y < x) { //provide check for second input, it should greater than or equals to first number, otherwise range doesn't make sense
+            cout << "Enter natural number that is greater than or equals to the first number: ";
+            cin >> y;
         }
+        cout << endl;
 
-        cout<<endl;
-
-        for (x; x < y+1; x++)
+        for (x; x < y + 1; x++)//iterate through each number in inputted range
         {
-            if(x == dig_return(x)) {
-                cout<<x<<" (square is "<<x*x<<")"<<endl;
+            //cout << "For number: "<< x << ", last digits are: " << dig_return(x) << endl; //test to make sure the function works well
+            if (x == dig_return(x)) {//if number is meeting logical criteria, print it out
+                cout << x << " (squared is " << x * x << ")" << endl;
             }
         }
-
 
         cout << endl;
         cout << "Continue program running (1) or quit application (0)?" << endl;
