@@ -66,4 +66,3 @@ def calculations(): #function for console output
 
 
 calculations()
-
