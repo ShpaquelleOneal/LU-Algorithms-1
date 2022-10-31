@@ -7,7 +7,7 @@ C1[6]. Given natural number N. Without using in-built power and/or root function
 using namespace std;
 
 int main () {
-    int d = 1;
+    int d = 0;
     int n;
     cin >> n;
     while (d*d < n) d++;

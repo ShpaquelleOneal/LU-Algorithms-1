@@ -8,7 +8,7 @@ using namespace std;
 
 
 int main() {
-    int d = 1;
+    int d = 0;
     int n;
 
     cin >> n;
