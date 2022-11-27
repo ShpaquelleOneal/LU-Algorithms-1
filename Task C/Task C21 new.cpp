@@ -4,7 +4,7 @@ Edgars Spira, es22027
 C21. Given natural numbers n and a(1), a(2), ... a(n).
 Do not sort all numbers in array but find the third largest number from given a(1), a(2), ... a(n).
 
-Program created: 25/11/2022
+Program created: 27/11/2022
 ********************************/
 
 #include <iostream>
