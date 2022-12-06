@@ -9,43 +9,23 @@ Program created: 28/11/2022
 #include <iostream>
 #include "car.h"
 
+
 using namespace std;
 
 int main() {
-
-    car a(45, 7.5, 70);
+    car a(45, 7.49, 70);
     a.print();
     a.calculate();
-
     a.change(5, 2.5, -10);
-    a.print();
     a.calculate();
-}
-/*
-void car::print() {
-    cout << fuel << "(l); " << consump << "(l/100km); " << opt_speed << "(km/h);" << endl;
-}
 
-//change method adds inputted values to the original values
-void car::change(double a, double b, double c) {
-    fuel += a;
-    consump += b;
-    opt_speed += c;
-}
+    car a1(-100, -2.99, 25);
+    a1.print();
+    a1.change(0, 10, 1);
+    a1.calculate();
 
-//calculates and prints out remaining kilometres and hours of driving
-void car::calculate() {
-    double kmrem = (fuel/consump) * 100;
-    cout << "Remaining: " << kmrem << " km / " << kmrem / opt_speed << " hours of driving with current speed." << endl;
-    cout << endl;
+    car a2(-100, -2.99, 25);
+    a2.print();
+    a2.change(100, 10, -30);
+    a2.calculate();
 }
-
-car::car(double f, double con, double speed) {
-    fuel = f;
-    consump = con;
-    opt_speed = speed;
-}
-
-car::~car() {
-    cout << "The object has been deleted..." << endl;
-}*/

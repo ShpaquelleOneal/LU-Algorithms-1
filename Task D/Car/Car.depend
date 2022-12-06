@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1669797489 source:c:\users\trej2\documents\codeblocks\university-of-latvia\task d\car\main.cpp
-	<iostream>
-	"car.h"
-
-1669797956 c:\users\trej2\documents\codeblocks\university-of-latvia\task d\car\car.h
-	<iostream>
-

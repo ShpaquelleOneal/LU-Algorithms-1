@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1670316024 source:c:\users\trej2\documents\codeblocks\university-of-latvia\task d\car_class\main.cpp
+	<iostream>
+	"car.h"
+
+1670259937 c:\users\trej2\documents\codeblocks\university-of-latvia\task d\car_class\car.h
+
+1670271388 source:c:\users\trej2\documents\codeblocks\university-of-latvia\task d\car_class\car2.cpp
+	"car.h"
+	<iostream>
+	<cmath>
+

@@ -1,11 +1,6 @@
 #ifndef CAR_H
 #define CAR_H
 
-#include <iostream>
-
-using namespace std;
-
-
 class car {
 //private: by default
     double fuel; //Litres
@@ -14,10 +9,10 @@ class car {
 
 public:
     void print();
-    void change(double a, double b, double c);
+    void change(double, double, double);
     void calculate();
 
-    car(double f, double con, double speed);
+    car(double, double, double);
     ~car();
 };
 
