@@ -1,4 +1,4 @@
-// Check if string is symmetric
+// Order inputted numbers
 
 #include <iostream>
 
