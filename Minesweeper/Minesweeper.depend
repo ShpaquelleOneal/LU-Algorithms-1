@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1674560690 source:c:\users\trej2\documents\university of latvia\algorithms-1\minesweeper\main.cpp
+	<iostream>
+
+1674638634 source:c:\users\trej2\documents\university of latvia\algorithms-1\minesweeper\algorithm.cpp
+	<iostream>
+	<stdlib.h>
+	<ctime>
+

@@ -7,12 +7,13 @@ void displayMap () {
 
 }
 
-void generateMap () {
+void generateMap (int field [], int size) {
 
 }
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    int x, y;
+    cout << "Select map size x by y: ";
+    cin >> x >> y;
 }
